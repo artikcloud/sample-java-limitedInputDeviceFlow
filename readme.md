@@ -30,7 +30,7 @@ class Config {
 }    
 ```
 
-###Run sample  
+### Run sample  
 
 Run the `DeviceFlowLimitedInput.java`. Here are the steps using Eclipse IDE: 
 
