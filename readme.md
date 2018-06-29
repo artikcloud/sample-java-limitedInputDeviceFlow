@@ -1,26 +1,26 @@
-# Sample using Device Flow (limited input) authentication 
+# Sample using Limited Input (device flow) authentication 
 
-This sample demonstrates the ARTIK cloud services device flow (limited input) authentication.   This allows a user to use a 2nd device (like mobile phone) to complete the authentication to device with limited input (i.e.:  no keyboard).  In this example a console application will authenticate when the user authenticates remotely with a phone (or another computer) via the web.
+This sample demonstrates the ARTIK cloud services Limited Input (device flow) authentication. This flow allows a user to use a secondary device (e.g. mobile phone) to complete authentication on a device with limited input (e.g. no keyboard). In this example, a console application will authenticate when the user authenticates remotely with a phone (or another computer) via the web.
 
 **Prerequisites**
 
-* java version >= 1.7
+* Java version >= 1.7
 * mvn (for installing dependencies)
-* eclipse (or your favorite editor)
+* Eclipse (or your favorite editor)
 
 ### Setup / Installation
 
 You will first need to **create an application** by visiting https://developer.artik.cloud.   
 
-1. Add any permission scope or devices types to the application (optional)
-2. Set the authentication type to "device flow (limited input)" (required)
+1. Add any permission scope or device types to the application (optional)
+2. Set the authentication type to "Limited Input" (required)
 3. Retrive the `client_id` which will be needed later (required)
 
-If you need help with any of above steps, the following [documentation guide](https://developer.artik.cloud/documentation/getting-started/applications.html) is available.
+If you need help with any of the above steps, read the [application guide](https://developer.artik.cloud/documentation/getting-started/applications.html).
 
 ### **Code setup**
 
-1. We will use eclipse to import project as a maven project: `File->Import->Maven->Existing Maven Projects`
+1. We will use Eclipse to import project as a maven project: `File->Import->Maven->Existing Maven Projects`
 2. Edit the `/src/Config.java` and enter your `client_id` you retrieved earlier.
 
 ```java
@@ -32,14 +32,14 @@ class Config {
 
 ###Run sample  
 
-Run the `DeviceFlowLimitedInput.java`.  Here are steps using Eclipse IDE: 
+Run the `DeviceFlowLimitedInput.java`. Here are the steps using Eclipse IDE: 
 
 ```
 Right Click `DeviceFlowLimitedInput.java` from the editor
 Run As -> Java Application
 ```
 
-If running correctly it will display a code for user to enter at the following link `https://artik.cloud/go` and will wait until user completes this step.
+If running correctly, it will display a code for the user to enter at the link `https://artik.cloud/go`, and will wait until user has completed this step.
 
 ```java
 Generating code ...
@@ -47,7 +47,7 @@ Generating code ...
 > Go to https://artik.cloud/go and enter code GCBH-DKZP
 ```
 
-Using the browser (or any other device like mobile phone), go the the above link to login, enter code, and grant any permissions required.   Upon completion of entering the code, the running script earlier will acknowledge success.
+Using the browser (or any secondary device, e.g. mobile phone), go the the above link to login, enter code, and grant any permissions requested. Upon completion of entering the code, the running script earlier will acknowledge success.
 
 ```java
 //...
